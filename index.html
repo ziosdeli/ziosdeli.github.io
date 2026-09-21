@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://ziosdeli.com/">
+<meta property="og:title" content="Zio's Italian Deli — Croton-on-Hudson, NY">
+<meta property="og:description" content="Fresh-made Italian heroes, hot & cold subs, breakfast, cold cuts, salads and catering. Open 7 days. Call (914) 930-8535.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ziosdeli.com/">
+<meta name="theme-color" content="#0C3A22">
+<title>Zio's Italian Deli</title>
+<meta name="description" content="Zio's Italian Deli in Croton-on-Hudson, NY — fresh-made Italian heroes, hot & cold subs, breakfast, cold cuts, salads and full-service catering. Open 7 days. Call (914) 930-8535." />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Serif+Display:ital@0;1&display=swap');
+
+  :root{
+    --paper:#FFFDF8;
+    --paper-2:#F4EFE2;
+    --ink:#23302A;
+    --muted:#63705F;
+    --green:#0B8A3E;
+    --green-deep:#076B30;
+    --green-dark:#0C3A22;
+    --red:#CD212A;
+    --red-deep:#A61B23;
+    --cream:#FBF7EE;
+    --line:#E7E0CE;
+    --star:#E8A81E;
+    --white:#fff;
+
+    --display:'DM Serif Display',Georgia,'Times New Roman',serif;
+    --head:'DM Sans','Segoe UI',system-ui,sans-serif;
+    --body:'DM Sans','Segoe UI',system-ui,sans-serif;
+    --script:'DM Serif Display',Georgia,serif;
+
+    --maxw:1120px;
+    --radius:14px;
+    --shadow:0 18px 40px -24px rgba(35,48,42,.4);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit}
+  img{max-width:100%}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding-inline:20px}
+  section{scroll-margin-top:84px}
+
+  .tricolore{height:5px;background:linear-gradient(90deg,var(--green) 0 33.33%,#fff 33.33% 66.66%,var(--red) 66.66% 100%)}
+
+  .logo{width:50px;height:42px;flex:none}
+
+  /* Header */
+  header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(251,247,238,.96);color:var(--ink);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+  .bar{display:flex;align-items:center;gap:16px;min-height:68px;padding-block:8px}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);margin-right:auto}
+  .brand b{font-family:var(--head);font-weight:700;font-size:22px;letter-spacing:.2px;line-height:1;display:block}
+  .brand .tag{font-family:var(--head);font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:var(--green);font-weight:600}
+  nav.main{display:flex;gap:22px}
+  nav.main a{font-family:var(--head);text-transform:uppercase;letter-spacing:1.2px;font-size:13px;font-weight:600;text-decoration:none;color:var(--ink);opacity:.85}
+  nav.main a:hover{opacity:1;color:var(--green)}
+  .call{display:inline-flex;align-items:center;gap:9px;text-decoration:none;background:var(--red);color:#fff;font-family:var(--head);font-weight:600;text-transform:uppercase;letter-spacing:1px;font-size:13.5px;padding:11px 17px;border-radius:999px;white-space:nowrap;transition:background .15s}
+  .call:hover{background:var(--red-deep)}
+  .call svg{width:16px;height:16px}
+  .hamburger{display:none;flex:none;width:44px;height:44px;border:1px solid var(--line);background:#fff;border-radius:11px;cursor:pointer;padding:0;place-items:center}
+  .hamburger span,.hamburger span::before,.hamburger span::after{content:"";display:block;width:20px;height:2.4px;background:var(--ink);border-radius:2px;position:relative;transition:.22s}
+  .hamburger span::before{position:absolute;top:-6px}
+  .hamburger span::after{position:absolute;top:6px}
+  .hamburger[aria-expanded="true"] span{background:transparent}
+  .hamburger[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg)}
+  .hamburger[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg)}
+  .mobile-nav{position:absolute;left:0;right:0;top:100%;background:var(--cream);border-bottom:1px solid var(--line);box-shadow:0 16px 30px -18px rgba(35,48,42,.5);padding:8px 20px 18px;transform-origin:top;animation:drop .18s ease}
+  @keyframes drop{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+  .mobile-nav a{display:block;font-family:var(--head);text-transform:uppercase;letter-spacing:1.2px;font-size:15px;font-weight:600;text-decoration:none;color:var(--ink);padding:14px 4px;border-bottom:1px dashed var(--line)}
+  .mobile-nav a:last-child{border-bottom:0}
+  .mobile-bar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(251,247,238,.97);border-top:1px solid var(--line);backdrop-filter:blur(8px)}
+  .mobile-bar a{flex:1;justify-content:center;padding:13px 10px;font-size:13.5px}
+  @media(max-width:900px){nav.main{display:none}.brand .tag{display:none}.hamburger{display:grid}}
+  @media(max-width:520px){.call span.num{display:none}.call{padding:11px 13px}}
+  @media(max-width:720px){.mobile-bar{display:flex}body{padding-bottom:70px}}
+
+  /* Hero */
+  .hero{position:relative;color:var(--ink);background:radial-gradient(130% 120% at 82% 0,#fff 0,var(--cream) 48%,#F0E9D8 100%);overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero::before{content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;background-image:repeating-linear-gradient(90deg,rgba(11,138,62,.05) 0 1px,transparent 1px 34px)}
+  .hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;padding-block:60px 68px}
+  .eyebrow{font-family:var(--head);text-transform:uppercase;letter-spacing:3px;font-size:13px;color:var(--green-deep);font-weight:700;margin:0 0 14px}
+  .eyebrow .dot{color:var(--red)}
+  h1{font-family:var(--display);font-weight:400;line-height:1;letter-spacing:0;font-size:clamp(44px,7vw,76px);margin:0 0 18px;text-wrap:balance;color:var(--ink)}
+  h1 em{font-style:italic;color:var(--red)}
+  .lede{font-size:18px;max-width:36ch;color:#4a5750;margin:0 0 26px}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-family:var(--head);text-transform:uppercase;letter-spacing:1px;font-weight:600;font-size:14px;padding:14px 22px;border-radius:999px;transition:.15s;cursor:pointer;border:0}
+  .btn svg{width:17px;height:17px}
+  .btn.primary{background:var(--red);color:#fff}
+  .btn.primary:hover{background:var(--red-deep)}
+  .btn.green{background:var(--green);color:#fff}
+  .btn.green:hover{background:var(--green-deep)}
+  .btn.ghost{background:transparent;color:var(--green-deep);box-shadow:inset 0 0 0 1.6px rgba(11,138,62,.45)}
+  .btn.ghost:hover{background:rgba(11,138,62,.08)}
+  .hero-meta{display:flex;gap:20px;flex-wrap:wrap;margin-top:28px;font-family:var(--head);font-size:13px;letter-spacing:.3px}
+  .hero-meta span{display:flex;align-items:center;gap:8px;color:#4a5750}
+  .hero-meta b{color:var(--green-deep)}
+  .open-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(11,138,62,.1);color:var(--green-deep);border:1px solid rgba(11,138,62,.3);padding:6px 13px;border-radius:999px;font-family:var(--head);font-size:12.5px;letter-spacing:.5px;text-transform:uppercase;font-weight:600}
+  .open-pill .live{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px rgba(11,138,62,.2)}
+
+  .board{background:#fff;border:1px solid var(--line);border-radius:18px;padding:0 22px 20px;box-shadow:var(--shadow);overflow:hidden}
+  .board .bhead{margin:0 -22px 14px;padding:16px 22px;background:var(--green-dark);text-align:center}
+  .board h3{font-family:var(--display);color:#fff;font-weight:400;font-size:26px;letter-spacing:0;margin:0}
+  .board .sub{font-family:var(--head);text-transform:uppercase;letter-spacing:2px;font-size:10px;color:#B8E0C4;margin-top:2px}
+  .board ul{list-style:none;margin:0;padding:0}
+  .board li{display:flex;align-items:baseline;gap:8px;padding:8px 0;border-bottom:1px dashed var(--line);font-size:14.5px;color:var(--ink)}
+  .board li:last-child{border-bottom:0}
+  .board .nm{font-weight:500}
+  .board .lead{flex:1;border-bottom:1px dotted #cbb98f;transform:translateY(-4px)}
+  .board .pr{font-family:var(--head);font-weight:700;color:var(--red-deep)}
+  .board .note{text-align:center;font-size:11.5px;color:var(--muted);margin:14px 0 0;font-style:italic}
+  @media(max-width:820px){.hero .wrap{grid-template-columns:1fr;gap:34px;padding-block:42px 50px}.lede{max-width:none}}
+
+  /* Feature strip */
+  .strip{background:var(--paper-2);border-block:1px solid var(--line)}
+  .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding:0}
+  .feat{padding:24px 18px;text-align:center;border-left:1px solid var(--line)}
+  .feat:first-child{border-left:0}
+  .feat svg{width:30px;height:30px;color:var(--green);margin-bottom:8px}
+  .feat b{display:block;font-family:var(--head);text-transform:uppercase;letter-spacing:1.2px;font-size:13.5px;font-weight:700;color:var(--ink)}
+  .feat p{margin:3px 0 0;font-size:12.5px;color:var(--muted)}
+  @media(max-width:720px){.strip .wrap{grid-template-columns:repeat(2,1fr)}.feat:nth-child(2){border-left:0}.feat:nth-child(3),.feat:nth-child(4){border-top:1px solid var(--line)}}
+
+  /* Section shells */
+  .section{padding-block:74px}
+  .section.alt{background:var(--paper-2)}
+  .kicker{font-family:var(--head);text-transform:uppercase;letter-spacing:3px;font-size:13px;font-weight:700;color:var(--red);margin:0 0 10px}
+  .h2{font-family:var(--display);font-weight:400;font-size:clamp(32px,4.6vw,48px);line-height:1.05;letter-spacing:0;margin:0 0 16px;color:var(--ink);text-wrap:balance}
+  .intro{max-width:62ch;color:var(--muted);font-size:17px;margin:0 0 30px}
+
+  /* Signature sandwiches */
+  .sig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:44px}
+  .sig{background:#fff;border:1px solid var(--line);border-top:3px solid var(--green);border-radius:var(--radius);padding:20px 22px 18px;box-shadow:0 10px 28px -26px rgba(35,48,42,.5);display:flex;flex-direction:column}
+  .sig:nth-child(3n-1){border-top-color:var(--red)}
+  .sig .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:8px}
+  .sig .name{font-family:var(--display);font-weight:400;font-size:23px;letter-spacing:0;color:var(--green-deep);line-height:1.05}
+  .sig:nth-child(3n-1) .name{color:var(--red-deep)}
+  .sig .price{font-family:var(--head);font-weight:700;font-size:14.5px;color:var(--ink);white-space:nowrap;text-align:right}
+  .sig .desc{font-size:14px;color:#4a5348;margin:0}
+  @media(max-width:820px){.sig-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.sig-grid{grid-template-columns:1fr}}
+
+  /* Menu category cards */
+  .menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;align-items:start}
+  .menu-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px 24px 20px;box-shadow:0 10px 28px -26px rgba(35,48,42,.5)}
+  .menu-card.span2{grid-column:1 / -1}
+  .menu-card h3{font-family:var(--head);text-transform:uppercase;letter-spacing:1.2px;font-weight:700;font-size:18px;margin:0 0 3px;color:var(--ink);display:flex;align-items:center;gap:10px}
+  .menu-card h3 .ico{width:22px;height:22px;color:var(--green);flex:none}
+  .menu-card .cap{font-size:12.5px;color:var(--muted);margin:0 0 14px;font-style:italic}
+  .menu-card ul{list-style:none;margin:0;padding:0}
+  .menu-card .nm b{font-weight:600}
+  .menu-card .nm small{display:block;font-size:12px;color:var(--muted);font-style:normal;line-height:1.35}
+  .menu-card .pr{font-family:var(--head);font-weight:700;color:var(--red-deep);font-variant-numeric:tabular-nums;text-align:right}
+  .menu-card .pr small{font-weight:400;color:var(--muted)}
+
+  .p1 li{display:flex;align-items:baseline;gap:8px;padding:7px 0;font-size:14.5px}
+  .p1 li+li{border-top:1px dashed var(--line)}
+  .p1 .lead{flex:1;border-bottom:1px dotted #cbb98f;transform:translateY(-3px)}
+
+  .p2 li,.p2 .phead{display:grid;grid-template-columns:1fr 58px 58px;gap:6px;align-items:baseline}
+  .p3 li,.p3 .phead{display:grid;grid-template-columns:1fr 52px 52px 52px;gap:6px;align-items:baseline}
+  .p2 li,.p3 li{padding:7px 0;font-size:14.5px}
+  .p2 li+li,.p3 li+li{border-top:1px dashed var(--line)}
+  .phead{padding:0 0 6px;border-bottom:1.5px solid var(--line);margin-bottom:2px}
+  .phead span{font-family:var(--head);text-transform:uppercase;letter-spacing:.6px;font-size:10.5px;color:var(--muted);text-align:right}
+  .phead .lbl{text-align:left}
+
+  .menu-actions{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 38px}
+  .menu-note{margin-top:26px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--green);border-radius:10px;padding:16px 20px;font-size:14px;color:var(--ink)}
+  .menu-note b{font-weight:700}
+  .twocol{display:grid;grid-template-columns:1fr 1fr;gap:0 34px}
+  @media(max-width:820px){.menu-grid{grid-template-columns:1fr}.menu-card.span2{grid-column:auto}.twocol{grid-template-columns:1fr}}
+
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  @media(max-width:820px){.split{grid-template-columns:1fr;gap:30px}}
+
+  .about-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:38px;box-shadow:0 12px 32px -28px rgba(35,48,42,.5);position:relative;overflow:hidden}
+  .about-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--green) 0 33.33%,#fff 33.33% 66.66%,var(--red) 66.66% 100%)}
+  .about-card .zio{font-family:var(--script);font-style:italic;font-size:23px;color:var(--red-deep);margin:6px 0 6px}
+  .about-card p{font-size:16px;color:#43503f}
+  .about-card p+p{margin-top:14px}
+
+  .stars{display:inline-flex;gap:3px;color:var(--star)}
+  .stars svg{width:22px;height:22px}
+  .reviews-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .info-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+  .info-card h3{font-family:var(--head);text-transform:uppercase;letter-spacing:1.2px;font-size:16px;font-weight:700;margin:0 0 16px;color:var(--ink);display:flex;align-items:center;gap:9px}
+  .info-card h3 svg{width:19px;height:19px;color:var(--green)}
+  .hours-tbl{width:100%;border-collapse:collapse;font-size:15px}
+  .hours-tbl td{padding:9px 0;border-bottom:1px dashed var(--line)}
+  .hours-tbl td:last-child{text-align:right;font-family:var(--head);font-weight:600;color:var(--ink)}
+  .hours-tbl tr.today td{color:var(--green-deep);font-weight:700}
+  .hours-tbl tr.today td:first-child::after{content:" • Today";font-family:var(--head);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--red)}
+  .hours-tbl tr:last-child td{border-bottom:0}
+  .addr{font-size:15.5px;line-height:1.9;margin:0 0 18px}
+  .addr b{font-family:var(--head)}
+  .addr a{color:var(--green-deep);text-decoration:none;font-weight:600}
+  .addr a:hover{text-decoration:underline}
+  @media(max-width:720px){.visit-grid{grid-template-columns:1fr}}
+
+  .faq{max-width:820px}
+  details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:4px 22px;margin-bottom:12px}
+  summary{cursor:pointer;list-style:none;padding:16px 0;font-family:var(--head);font-weight:600;font-size:16.5px;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:16px}
+  summary::-webkit-details-marker{display:none}
+  summary .plus{flex:none;width:22px;height:22px;position:relative}
+  summary .plus::before,summary .plus::after{content:"";position:absolute;background:var(--green);border-radius:2px;transition:.2s}
+  summary .plus::before{top:10px;left:3px;right:3px;height:2.5px}
+  summary .plus::after{left:10px;top:3px;bottom:3px;width:2.5px}
+  details[open] summary .plus::after{transform:scaleY(0)}
+  details .a{padding:0 0 18px;color:#43503f;font-size:15.5px}
+
+  footer.site{background:var(--green-dark);color:#CFE0D3;padding-block:52px 30px}
+  footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+  footer h4{font-family:var(--head);text-transform:uppercase;letter-spacing:2px;font-size:13px;font-weight:700;color:#fff;margin:0 0 14px}
+  footer a{color:#CFE0D3;text-decoration:none}
+  footer a:hover{color:#fff}
+  footer .fbrand b{font-family:var(--head);font-weight:700;font-size:24px;color:#fff;letter-spacing:.2px}
+  footer ul{list-style:none;margin:0;padding:0;line-height:2}
+  footer .contact div{display:flex;gap:9px;align-items:flex-start;margin-bottom:8px}
+  footer .contact svg{width:16px;height:16px;flex:none;margin-top:4px}
+  footer .legal{border-top:1px solid rgba(255,255,255,.16);margin-top:38px;padding-top:20px;font-size:12.5px;color:#94ad9c;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  @media(max-width:720px){footer .cols{grid-template-columns:1fr;gap:28px}}
+  .to-top{text-align:center;margin-top:8px}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+
+<!-- Crossed-flags logo sprite (US + Italy) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="crossedflags" viewBox="0 0 64 54">
+  <g stroke="#8a5a2b" stroke-width="2.4" stroke-linecap="round">
+    <line x1="22" y1="10" x2="42" y2="48"/>
+    <line x1="42" y1="10" x2="22" y2="48"/>
+  </g>
+  <circle cx="22" cy="10" r="2" fill="#d9a441"/>
+  <circle cx="42" cy="10" r="2" fill="#d9a441"/>
+  <g transform="translate(22 10) rotate(-12)">
+    <rect x="-20" y="-2.5" width="20" height="14" fill="#B22234"/>
+    <rect x="-20" y="-0.5" width="20" height="2" fill="#fff"/>
+    <rect x="-20" y="3.5" width="20" height="2" fill="#fff"/>
+    <rect x="-20" y="7.5" width="20" height="2" fill="#fff"/>
+    <rect x="-20" y="-2.5" width="9" height="7.5" fill="#3C3B6E"/>
+    <g fill="#fff"><circle cx="-18" cy="-0.8" r="0.5"/><circle cx="-15" cy="-0.8" r="0.5"/><circle cx="-16.5" cy="1.2" r="0.5"/><circle cx="-18" cy="3.2" r="0.5"/><circle cx="-15" cy="3.2" r="0.5"/></g>
+    <rect x="-20" y="-2.5" width="20" height="14" fill="none" stroke="rgba(0,0,0,.15)" stroke-width="0.5"/>
+  </g>
+  <g transform="translate(42 10) rotate(12)">
+    <rect x="0" y="-2.5" width="6.67" height="14" fill="#0B8A3E"/>
+    <rect x="6.67" y="-2.5" width="6.66" height="14" fill="#fff"/>
+    <rect x="13.33" y="-2.5" width="6.67" height="14" fill="#CD212A"/>
+    <rect x="0" y="-2.5" width="20" height="14" fill="none" stroke="rgba(0,0,0,.15)" stroke-width="0.5"/>
+  </g>
+</symbol></svg>
+
+<!-- HEADER -->
+<div class="tricolore"></div>
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Zio's Italian Deli home">
+      <svg class="logo" aria-hidden="true"><use href="#crossedflags"/></svg>
+      <span><b>Zio's Italian Deli</b><span class="tag">Croton-on-Hudson, NY</span></span>
+    </a>
+    <nav class="main" aria-label="Primary">
+      <a href="#menu">Menu</a>
+      <a href="#catering">Catering</a>
+      <a href="#about">About</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="call" href="tel:+19149308535">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span class="num">(914) 930-8535</span>
+    </a>
+    <button class="hamburger" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><span></span></button>
+    <nav class="mobile-nav" id="mnav" hidden aria-label="Mobile">
+      <a href="#menu">Menu</a>
+      <a href="#catering">Catering</a>
+      <a href="#about">About</a>
+      <a href="#visit">Visit</a>
+      <a href="tel:+19149308535">Call (914) 930-8535</a>
+    </nav>
+  </div>
+</header>
+
+<div class="mobile-bar" aria-label="Quick actions">
+  <a class="btn primary" href="tel:+19149308535">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Call
+  </a>
+  <a class="btn green" href="https://www.google.com/maps/dir/?api=1&destination=2040+Albany+Post+Road+Croton-on-Hudson+NY+10520" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    Directions
+  </a>
+</div>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero" aria-label="Introduction">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Croton-on-Hudson, NY <span class="dot">•</span> Store-made fresh mozzarella</p>
+      <h1>Real Italian Deli.<br>Fresh-made <em>heroes</em>, every day.</h1>
+      <p class="lede">Croton's neighborhood Italian deli — hot &amp; cold heroes, breakfast, imported cold cuts, homemade salads and full-service catering. Made fresh, seven days a week.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="tel:+19149308535">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call to Order
+        </a>
+        <a class="btn ghost" href="#menu">View the Menu</a>
+        <a class="btn ghost" href="https://www.google.com/maps/dir/?api=1&destination=2040+Albany+Post+Road+Croton-on-Hudson+NY+10520" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Directions
+        </a>
+      </div>
+      <div class="hero-meta">
+        <span class="open-pill"><span class="live"></span> Open 7 days — early at 6 AM</span>
+        <span><b>Mon–Fri</b> 6a–6p</span>
+        <span><b>Sat</b> 7a–4p</span>
+        <span><b>Sun</b> 8a–2p</span>
+      </div>
+    </div>
+
+    <aside class="board" aria-label="Signature heroes">
+      <div class="bhead"><h3>Signature Heroes</h3><div class="sub">Made to order</div></div>
+      <ul id="heroList"></ul>
+      <p class="note">Hero prices shown. Roll sizes from $8.75. See full menu below.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- FEATURE STRIP -->
+<div class="strip">
+  <div class="wrap">
+    <div class="feat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 13c0-3 3-6 8-6s8 3 8 6"/><path d="M2 13h20l-1.5 5.5a2 2 0 0 1-1.9 1.5H5.4a2 2 0 0 1-1.9-1.5L2 13z"/><path d="M8 7c0-1 .5-2 1-2M12 7c0-1 .5-2 1-2M16 7c0-1 .5-2 1-2"/></svg>
+      <b>Fresh Heroes</b><p>Hot &amp; cold, made to order</p>
+    </div>
+    <div class="feat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 11h18M5 11V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4M4 11l1.2 7.5a2 2 0 0 0 2 1.5h9.6a2 2 0 0 0 2-1.5L20 11"/></svg>
+      <b>Catering</b><p>Trays, party heroes &amp; platters</p>
+    </div>
+    <div class="feat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3c4 0 7 2 7 5s-3 4-7 4-7-1-7-4 3-5 7-5zM5 8v8c0 3 3 5 7 5s7-2 7-5V8"/></svg>
+      <b>Fresh Mozzarella</b><p>Made in-store daily</p>
+    </div>
+    <div class="feat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <b>Open Early</b><p>Coffee &amp; breakfast at 6 AM</p>
+    </div>
+  </div>
+</div>
+
+<!-- MENU -->
+<section id="menu" class="section">
+  <div class="wrap">
+    <p class="kicker">The Menu</p>
+    <h2 class="h2">Made fresh, priced right</h2>
+    <p class="intro">Everything is made to order on premises — from 6 AM breakfast sandwiches to hearty Italian heroes and homemade salads. Daily hot specials and soups change, so call ahead for today's board.</p>
+    <div class="menu-actions">
+      <a class="btn green" href="menu.pdf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        Download Menu (PDF)
+      </a>
+      <a class="btn primary" href="tel:+19149308535">Call to Order</a>
+    </div>
+
+    <h3 style="font-family:var(--head);text-transform:uppercase;letter-spacing:2px;font-size:15px;font-weight:700;color:var(--red);margin:0 0 6px">Signature Sandwiches</h3>
+    <p class="cap" style="font-size:13px;color:var(--muted);font-style:italic;margin:0 0 18px">Priced Roll / Hero</p>
+    <div class="sig-grid" id="sigGrid"></div>
+    <p class="cap" id="alsoAvail" style="font-size:13px;color:var(--muted);font-style:italic;margin:-26px 0 40px"></p>
+
+    <div class="menu-grid" id="menuGrid"></div>
+
+    <div class="menu-note">
+      <b>Good to know —</b> daily hot specials, soups and seasonal items change; call <a href="tel:+19149308535" style="color:var(--green-deep);font-weight:600">(914) 930-8535</a> for today's board. Prices shown are cash-discount prices; all credit cards accepted (subject to card fees). Prices subject to change.
+    </div>
+  </div>
+</section>
+
+<!-- CATERING -->
+<section id="catering" class="section alt">
+  <div class="wrap">
+    <p class="kicker">Catering</p>
+    <h2 class="h2">Let Zio's feed the party</h2>
+    <p class="intro">Office lunches, game days, graduations, holidays and family gatherings — we build a spread that leaves everyone full and happy. Please give at least <b>3 days' notice</b>. All catering is subject to tax.</p>
+    <div class="menu-actions">
+      <a class="btn primary" href="tel:+19149308535">Call to Plan Your Order</a>
+      <a class="btn green" href="mailto:ziosdeli@gmail.com?subject=Catering%20Inquiry%20-%20Zio's%20Italian%20Deli">Email an Inquiry</a>
+    </div>
+
+    <div class="menu-grid" id="cateringGrid"></div>
+
+    <div class="menu-note">
+      <b>Ordering —</b> at least <b>3 days' notice</b> is required for catering. Prices do not include tax; all catering is subject to tax and prices may change. Cash-discount prices shown; credit cards accepted (subject to card fees). Food allergy? Please speak to the owner or manager. Ask about our <b>seasonal &amp; holiday catering</b> menus. Call <a href="tel:+19149308535" style="color:var(--green-deep);font-weight:600">(914) 930-8535</a>.
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="wrap split">
+    <div>
+      <p class="kicker">Our Story</p>
+      <h2 class="h2">Your neighborhood "zio"</h2>
+      <p class="intro">In Italian, <em style="font-family:var(--script);font-style:italic;color:var(--red-deep)">zio</em> means uncle — and that's exactly the welcome you'll get. We're a family-run Italian deli in the heart of Croton-on-Hudson, serving fresh sandwiches, store-made mozzarella, imported specialties and honest, made-from-scratch food to our neighbors along the Hudson.</p>
+      <p class="intro" style="margin-bottom:0">Grabbing coffee before the Metro-North, feeding the office, or catering the block party — pull up a stool. You're family here.</p>
+    </div>
+    <div class="about-card">
+      <p class="zio">"Mangia bene, vivi bene."</p>
+      <p style="font-family:var(--head);text-transform:uppercase;letter-spacing:1.5px;font-size:12px;color:var(--muted);margin:0 0 18px">Eat well, live well.</p>
+      <p>What sets us apart is simple: quality ingredients, generous portions, and service from a place that knows your name. Store-made fresh mozzarella, homemade chicken cutlets and salads, imported prosciutto and soppressata you won't find at the supermarket.</p>
+      <p>Stop in — better yet, become a regular.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section alt" aria-label="Reviews">
+  <div class="wrap" style="text-align:center">
+    <p class="kicker" style="justify-content:center">Loved by the neighborhood</p>
+    <h2 class="h2" style="margin-bottom:8px">Croton keeps coming back</h2>
+    <div class="stars" role="img" aria-label="Five stars" style="margin:6px 0 4px">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+    <p class="intro" style="margin:0 auto 4px;text-align:center">Google reviews are one of the biggest factors in local search ranking. Ask happy customers to leave one — then wire these buttons to your Google Business Profile.</p>
+    <div class="reviews-cta" style="justify-content:center">
+      <a class="btn primary" href="https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID" target="_blank" rel="noopener">Leave a Google Review</a>
+      <a class="btn green" href="https://www.google.com/maps/search/Zio%27s+Italian+Deli+Croton-on-Hudson" target="_blank" rel="noopener">Read Reviews on Google</a>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section id="visit" class="section">
+  <div class="wrap">
+    <p class="kicker">Find Us</p>
+    <h2 class="h2">Visit Zio's in Croton-on-Hudson</h2>
+    <p class="intro">Right on Albany Post Road (Route 9A), with easy parking — minutes from the Croton-Harmon station. Come say hi.</p>
+    <div class="visit-grid">
+      <div class="info-card">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Location &amp; Contact</h3>
+        <p class="addr">
+          <b>Zio's Italian Deli</b><br>
+          2040 Albany Post Road<br>
+          Croton-on-Hudson, NY 10520<br>
+          Phone: <a href="tel:+19149308535">(914) 930-8535</a><br>
+          Email: <a href="mailto:ziosdeli@gmail.com">ziosdeli@gmail.com</a><br>
+          Instagram: <a href="https://instagram.com/zios_italian_deli" target="_blank" rel="noopener">@zios_italian_deli</a>
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://www.google.com/maps/dir/?api=1&destination=2040+Albany+Post+Road+Croton-on-Hudson+NY+10520" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>Get Directions
+          </a>
+          <a class="btn green" href="tel:+19149308535">Call Now</a>
+        </div>
+      </div>
+      <div class="info-card">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Hours</h3>
+        <table class="hours-tbl">
+          <tbody>
+            <tr><td>Monday</td><td>6:00 AM – 6:00 PM</td></tr>
+            <tr><td>Tuesday</td><td>6:00 AM – 6:00 PM</td></tr>
+            <tr><td>Wednesday</td><td>6:00 AM – 6:00 PM</td></tr>
+            <tr><td>Thursday</td><td>6:00 AM – 6:00 PM</td></tr>
+            <tr><td>Friday</td><td>6:00 AM – 6:00 PM</td></tr>
+            <tr><td>Saturday</td><td>7:00 AM – 4:00 PM</td></tr>
+            <tr><td>Sunday</td><td>8:00 AM – 2:00 PM</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section alt" aria-label="Frequently asked questions">
+  <div class="wrap">
+    <p class="kicker">Good to Know</p>
+    <h2 class="h2">Frequently asked questions</h2>
+    <div class="faq">
+      <details open>
+        <summary>Where is Zio's Italian Deli located?<span class="plus"></span></summary>
+        <div class="a">We're at 2040 Albany Post Road in Croton-on-Hudson, NY 10520 — on Route 9A with convenient parking, minutes from the Croton-Harmon Metro-North station.</div>
+      </details>
+      <details>
+        <summary>What are your hours?<span class="plus"></span></summary>
+        <div class="a">Monday–Friday 6:00 AM–6:00 PM, Saturday 7:00 AM–4:00 PM, and Sunday 8:00 AM–2:00 PM. We open early for coffee and breakfast on the go.</div>
+      </details>
+      <details>
+        <summary>Do you offer catering in Westchester?<span class="plus"></span></summary>
+        <div class="a">Yes — we cater office lunches, parties and holidays with pasta and hot trays, 3- and 6-foot party heroes, antipasto and cold-cut platters throughout Croton-on-Hudson and nearby Westchester. Please give at least 3 days' notice. Call (914) 930-8535 to plan your order.</div>
+      </details>
+      <details>
+        <summary>Can I call ahead to order a sandwich?<span class="plus"></span></summary>
+        <div class="a">Absolutely — call (914) 930-8535 and we'll have your order ready for pickup. It's the fastest way to skip the lunch rush.</div>
+      </details>
+      <details>
+        <summary>What's your most popular hero?<span class="plus"></span></summary>
+        <div class="a">The Zio's Combo (prosciutto, capocolla, soppressata, pepperoni and fresh mozzarella) and the Chicken Cutlet are neighborhood favorites. Don't miss our store-made fresh mozzarella and daily homemade soups.</div>
+      </details>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<div class="tricolore"></div>
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div class="fbrand">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px"><svg class="logo" aria-hidden="true"><use href="#crossedflags"/></svg><b>Zio's Italian Deli</b></div>
+        <p style="margin:0 0 16px;max-width:34ch">Croton-on-Hudson's neighborhood Italian deli — fresh heroes, breakfast, cold cuts, salads and catering.</p>
+        <div class="contact">
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="#8FD0A3" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>2040 Albany Post Road, Croton-on-Hudson, NY 10520</span></div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="#8FD0A3" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+19149308535">(914) 930-8535</a></div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="#8FD0A3" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg><a href="mailto:ziosdeli@gmail.com">ziosdeli@gmail.com</a></div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="#8FD0A3" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#8FD0A3" stroke="none"/></svg><a href="https://instagram.com/zios_italian_deli" target="_blank" rel="noopener">@zios_italian_deli</a></div>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#catering">Catering</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#visit">Visit / Directions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul>
+          <li>Mon–Fri: 6 AM – 6 PM</li>
+          <li>Saturday: 7 AM – 4 PM</li>
+          <li>Sunday: 8 AM – 2 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© <span id="yr"></span> Zio's Italian Deli · Croton-on-Hudson, NY</span>
+      <span>Italian Deli · Sandwiches · Catering in Westchester County</span>
+    </div>
+    <div class="to-top"><a href="#top" style="font-family:var(--head);font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#8FD0A3">↑ Back to top</a></div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Zio's Italian Deli",
+  "servesCuisine": ["Italian","Deli","Sandwiches"],
+  "@id": "https://ziosdeli.com",
+  "url": "https://ziosdeli.com",
+  "telephone": "+1-914-930-8535",
+  "email": "ziosdeli@gmail.com",
+  "priceRange": "$$",
+  "image": "https://ziosdeli.com/logo.jpg",
+  "sameAs": ["https://instagram.com/zios_italian_deli"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2040 Albany Post Road",
+    "addressLocality": "Croton-on-Hudson",
+    "addressRegion": "NY",
+    "postalCode": "10520",
+    "addressCountry": "US"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 41.2185, "longitude": -73.8790 },
+  "areaServed": "Croton-on-Hudson, NY and Westchester County",
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "06:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "07:00", "closes": "16:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "08:00", "closes": "14:00" }
+  ],
+  "hasMenu": "https://ziosdeli.com/#menu",
+  "acceptsReservations": "False"
+}
+</script>
+
+<!-- Menu data is in menu.js — edit that file to change the menu. -->
+<script src="menu.js"></script>
+<script>
+  const ICONS = {
+    hot:'<path d="M3 12h18M6 12V9a6 6 0 0 1 12 0v3M4 12l1 6a2 2 0 0 0 2 1.6h10a2 2 0 0 0 2-1.6l1-6"/>',
+    breakfast:'<path d="M4 8h16M4 8l1.5 10a2 2 0 0 0 2 1.7h9a2 2 0 0 0 2-1.7L20 8M4 8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3"/>',
+    coldcuts:'<path d="M12 3c4 0 7 2 7 5s-3 4-7 4-7-1-7-4 3-5 7-5zM5 8v8c0 3 3 5 7 5s7-2 7-5V8"/>',
+    coldsalads:'<path d="M4 13a8 8 0 0 1 16 0M2 13h20M12 5V3M7 13c0-3 2-5 5-5s5 2 5 5"/>',
+    saladscoffee:'<path d="M7 21h10M12 21v-6M5 9h14a7 7 0 0 1-14 0z"/>',
+    pasta:'<path d="M3 11h18M5 11V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3M5 11l1 8a2 2 0 0 0 2 1.7h8a2 2 0 0 0 2-1.7l1-8"/>',
+    chicken:'<path d="M14 4c2 0 4 2 4 4 0 1.5-1 3-3 3l-6 6-3 1 1-3 6-6c-1-2 0-5 4-5zM6 18l-2 2"/>',
+    platters:'<path d="M2 12c0-3 4-5 10-5s10 2 10 5-4 5-10 5S2 15 2 12z"/><path d="M6 10.5c1-1 3-1.5 6-1.5s5 .5 6 1.5"/>',
+    salad:'<path d="M4 13a8 8 0 0 1 16 0M2 13h20M12 5V3"/>'
+  };
+
+  /* ====================  MENU  ==================== */
+  /* ====================  RENDERER (no need to edit below)  ==================== */
+  (function(){
+    function ico(key){
+      return '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">'+(ICONS[key]||ICONS.salad)+'</svg>';
+    }
+    function nameHtml(it){
+      return '<b>'+it.name+'</b>'+(it.sub ? ' <small>'+it.sub+'</small>' : '');
+    }
+    function row(it, cols){
+      var nm = '<span class="nm">'+nameHtml(it)+'</span>';
+      if(!cols){ // single price list with leader
+        return '<li>'+nm+'<span class="lead"></span><span class="pr">'+(it.price||'')+'</span></li>';
+      }
+      if(it.full !== undefined){
+        return '<li>'+nm+'<span class="pr" style="grid-column:span '+cols.length+'">'+it.full+'</span></li>';
+      }
+      var cells = cols.map(function(_,i){ return '<span class="pr">'+((it.p&&it.p[i])||'')+'</span>'; }).join('');
+      return '<li>'+nm+cells+'</li>';
+    }
+    function listHtml(items, cols){
+      var head = cols ? '<div class="phead"><span class="lbl"></span>'+cols.map(function(c){return '<span>'+c+'</span>';}).join('')+'</div>' : '';
+      return '<ul>'+head+items.map(function(it){return row(it,cols);}).join('')+'</ul>';
+    }
+    function card(cat){
+      var cls = 'menu-card '+(cat.cols ? 'p'+cat.cols.length : 'p1')+(cat.span2?' span2':'');
+      var body;
+      if(cat.twoCol){
+        var half = Math.ceil(cat.items.length/2);
+        body = '<div class="twocol">'+listHtml(cat.items.slice(0,half),cat.cols)+listHtml(cat.items.slice(half),cat.cols)+'</div>';
+      } else {
+        body = listHtml(cat.items, cat.cols);
+      }
+      var note = cat.note ? '<p class="cap" style="margin:14px 0 0">'+cat.note+'</p>' : '';
+      return '<div class="'+cls+'"><h3>'+ico(cat.icon)+cat.title+'</h3><p class="cap">'+(cat.caption||'')+'</p>'+body+note+'</div>';
+    }
+    function set(id, html){ var el = document.getElementById(id); if(el) el.innerHTML = html; }
+
+    try{
+      // Hero list (first 5 heroes)
+      set('heroList', MENU_DATA.signature.items.slice(0,5).map(function(it){
+        return '<li><span class="nm">'+it.name+'</span><span class="lead"></span><span class="pr">$'+it.hero+'</span></li>';
+      }).join(''));
+
+      // Signature cards
+      set('sigGrid', MENU_DATA.signature.items.map(function(it){
+        return '<div class="sig"><div class="top"><span class="name">'+it.name+'</span><span class="price">'+it.roll+' / '+it.hero+'</span></div><p class="desc">'+it.desc+'</p></div>';
+      }).join(''));
+      set('alsoAvail', MENU_DATA.signature.alsoAvailable);
+
+      // Menu + catering grids
+      set('menuGrid', MENU_DATA.categories.map(card).join(''));
+      set('cateringGrid', CATERING_DATA.categories.map(card).join(''));
+    }catch(e){ console.error('Menu render error:', e); }
+  })();
+</script>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  (function(){
+    try{
+      var day = new Date().getDay();
+      var idx = (day + 6) % 7;
+      var rows = document.querySelectorAll('.hours-tbl tbody tr');
+      if(rows[idx]) rows[idx].classList.add('today');
+    }catch(e){}
+  })();
+  (function(){
+    var btn = document.getElementById('navToggle');
+    var nav = document.getElementById('mnav');
+    if(!btn || !nav) return;
+    function setOpen(open){
+      nav.hidden = !open;
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    }
+    btn.addEventListener('click', function(){ setOpen(nav.hidden); });
+    nav.addEventListener('click', function(e){ if(e.target.closest('a')) setOpen(false); });
+    window.addEventListener('resize', function(){ if(window.innerWidth > 900) setOpen(false); });
+  })();
+</script>
+
+</body>
+</html>
