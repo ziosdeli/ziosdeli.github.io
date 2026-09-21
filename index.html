@@ -286,6 +286,7 @@
       <span><b>Zio's Italian Deli</b><span class="tag">Croton-on-Hudson, NY</span></span>
     </a>
     <nav class="main" aria-label="Primary">
+      <a href="#order">Order</a>
       <a href="#menu">Menu</a>
       <a href="#catering">Catering</a>
       <a href="#about">About</a>
@@ -297,6 +298,7 @@
     </a>
     <button class="hamburger" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><span></span></button>
     <nav class="mobile-nav" id="mnav" hidden aria-label="Mobile">
+      <a href="#order">Order Online</a>
       <a href="#menu">Menu</a>
       <a href="#catering">Catering</a>
       <a href="#about">About</a>
@@ -311,9 +313,9 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
     Call
   </a>
-  <a class="btn green" href="https://www.google.com/maps/dir/?api=1&destination=2040+Albany+Post+Road+Croton-on-Hudson+NY+10520" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-    Directions
+  <a class="btn green" href="https://zios-italian-deli.cloveronline.com" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2l1 6h10l1-6M5 8h14l-1 12a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 8z"/></svg>
+    Order
   </a>
 </div>
 
@@ -373,6 +375,41 @@
     </div>
   </div>
 </div>
+
+<style>
+  .order-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:920px;margin:0 auto}
+  .order-card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 14px;color:var(--ink);transition:.15s;position:relative}
+  .order-card:hover{border-color:var(--green);transform:translateY(-2px);box-shadow:0 12px 26px -18px rgba(35,48,42,.5)}
+  .order-card b{font-family:var(--head);font-weight:700;font-size:17px;letter-spacing:.3px}
+  .order-card .osub{font-size:12px;color:var(--muted)}
+  .order-card.featured{background:var(--green-dark);border-color:var(--green-dark);color:#fff}
+  .order-card.featured b{color:#fff}
+  .order-card.featured .osub{color:#B8E0C4}
+  .order-card .otag{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--red);color:#fff;font-family:var(--head);font-weight:600;font-size:10px;letter-spacing:.5px;text-transform:uppercase;padding:3px 12px;border-radius:999px;white-space:nowrap}
+  .order-card svg{width:26px;height:26px;margin-bottom:4px}
+  @media(max-width:720px){.order-grid{grid-template-columns:1fr 1fr}}
+</style>
+
+<!-- ORDER ONLINE -->
+<section id="order" class="section alt">
+  <div class="wrap" style="text-align:center">
+    <p class="kicker" style="justify-content:center">Order Online</p>
+    <h2 class="h2" style="margin-bottom:10px">Skip the line - order ahead</h2>
+    <p class="intro" style="margin:0 auto 30px;text-align:center">Order pickup direct from us for the best price with no delivery-app fees, or get it delivered by your favorite app.</p>
+    <div class="order-grid">
+      <a class="order-card featured" href="https://zios-italian-deli.cloveronline.com" target="_blank" rel="noopener">
+        <span class="otag">Best price · No fees</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2l1 6h10l1-6M5 8h14l-1 12a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 8z"/></svg>
+        <b>Order Pickup</b>
+        <span class="osub">Direct from Zio's</span>
+      </a>
+      <a class="order-card" href="https://www.doordash.com/" target="_blank" rel="noopener"><b>DoorDash</b><span class="osub">Delivery</span></a>
+      <a class="order-card" href="https://www.ubereats.com/" target="_blank" rel="noopener"><b>Uber Eats</b><span class="osub">Delivery</span></a>
+      <a class="order-card" href="https://www.grubhub.com/" target="_blank" rel="noopener"><b>Grubhub</b><span class="osub">Delivery</span></a>
+    </div>
+    <p class="cap" style="text-align:center;margin:22px auto 0;color:var(--muted)">Tip: ordering pickup direct saves you the delivery-app service fees.</p>
+  </div>
+</section>
 
 <!-- MENU -->
 <section id="menu" class="section">
