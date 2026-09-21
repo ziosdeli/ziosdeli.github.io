@@ -1,5 +1,5 @@
 /* ============================================================
-   ZIO'S ITALIAN DELI — MENU DATA
+   ZIO'S ITALIAN DELI - MENU DATA
    ============================================================
    THIS IS THE ONLY FILE YOU EDIT TO CHANGE THE MENU OR PRICES.
    Save this file, then re-upload it (and refresh the site).
@@ -51,7 +51,7 @@ window.MENU_DATA = {
       ]
     },
     {
-      title:"Hot Food", icon:"hot", caption:"Made hot — on a roll, wedge, or by the pound",
+      title:"Hot Food", icon:"hot", caption:"Made hot - on a roll, wedge, or by the pound",
       cols:["Roll","Wedge","lb"],
       items:[
         { name:"Chicken Cutlet", p:["9.49","12.99","10.99"] },
@@ -114,7 +114,7 @@ window.MENU_DATA = {
 window.CATERING_DATA = {
   categories: [
     {
-      title:"Pasta Trays", icon:"pasta", caption:"Feeds a crowd — half or full tray",
+      title:"Pasta Trays", icon:"pasta", caption:"Feeds a crowd - half or full tray",
       cols:["Half","Full"],
       items:[
         { name:"Baked Ziti", p:["45","80"] },
@@ -145,9 +145,9 @@ window.CATERING_DATA = {
       title:"Party Heroes & Platters", icon:"platters", caption:"The centerpiece of any gathering",
       span2:true, twoCol:true,
       items:[
-        { name:"Party Heroes — 3 or 6 ft wedges", sub:"ring shape +$1.00/ft", price:"$18.99/ft" },
+        { name:"Party Heroes - 3 or 6 ft wedges", sub:"ring shape +$1.00/ft", price:"$18.99/ft" },
         { name:"Zio's Party Platter", sub:"Genoa salami, soppressata, pepperoni, provolone, olives, roasted peppers, artichoke hearts & bocconcini", price:"$120 lg" },
-        { name:"Cold Cut Platter", sub:"Small / Large", price:"$65–120" },
+        { name:"Cold Cut Platter", sub:"Small / Large", price:"$65-120" },
         { name:"Also available", sub:"Italian antipasto · mixed sandwiches & wraps · assorted cheese & fruit", price:"Call" }
       ]
     }
