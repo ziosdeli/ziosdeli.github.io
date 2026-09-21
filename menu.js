@@ -4,37 +4,34 @@
    THIS IS THE ONLY FILE YOU EDIT TO CHANGE THE MENU OR PRICES.
    Save this file, then re-upload it (and refresh the site).
 
+   Prices shown are CASH-DISCOUNT prices (credit-card prices are
+   higher and shown at the register). All subject to tax.
+
    How each item works:
      name   = the item name
      sub    = small grey note under the name        (optional)
-     p      = one price per column, in order         e.g. p:["7.99","9.99","9.99"]
-     price  = a single price (for simple lists)      e.g. price:"6.95"
-     full   = one price that spans all the columns   e.g. full:"6.99 / lb"
+     p      = one price per column, in order         e.g. p:["9.49","12.99","10.99"]
+     price  = a single price (for simple lists)      e.g. price:"7.99"
+     full   = one price that spans all the columns   e.g. full:"9.99 / lb"
 
    For a category:
-     title   = the heading
-     caption = the small italic line under the heading
-     icon    = which icon to show (breakfast, hot, coldcuts, coldsalads,
-               saladscoffee, pasta, chicken, platters, salad)
-     cols    = the price column headers  e.g. cols:["Roll","Wedge","Dish"]
-               (leave cols out for a simple single-price list)
-     span2   = true  -> makes the card full width
-     twoCol  = true  -> splits its items into two columns
-     note    = extra grey text under the list        (optional)
+     title / caption / icon
+     cols   = the price column headers   e.g. cols:["Roll","Wedge"]  (omit for single-price)
+     span2  = true -> full-width card ;  twoCol = true -> two columns ;  note = grey text under list
 
    The order of the categories below is the order they appear on the page.
    ============================================================ */
 
 window.MENU_DATA = {
   signature: {
-    alsoAvailable: "Also available: Grilled Chicken Caesar Wrap $9.99 · Hamburgers & Fries · BLT · Chopped Cheese · Philly Cheese Steaks · Grilled Cheese.",
+    alsoAvailable: "Also available: BLT $5.99 / $8.99 (roll / hero) · Hamburgers & Fries · Chopped Cheese · Philly Cheese Steaks · Grilled Cheese.",
     items: [
-      { name:"The Joey",      roll:"8.75", hero:"10.99", desc:"Prosciutto, fresh mozzarella, red roasted peppers & house dressing." },
-      { name:"Italian Combo", roll:"8.75", hero:"10.99", desc:"Ham, Genoa salami, mortadella & provolone, lettuce, tomato, oil & vinegar." },
-      { name:"Zio's Combo",   roll:"8.99", hero:"11.99", desc:"Prosciutto, capocolla, soppressata, pepperoni, mozzarella, peppers, oil & vinegar." },
-      { name:"First Born",    roll:"8.75", hero:"10.99", desc:"Roast beef, cheddar, lettuce, tomato, onion, pickles & dressing." },
-      { name:"The Fia",       roll:"8.75", hero:"10.99", desc:"Turkey, Muenster cheese, lettuce, tomato, pickles, oil & vinegar." },
-      { name:"The Scotty",    roll:"8.75", hero:"10.99", desc:"Fried eggplant, fresh mozzarella, roasted peppers, oil & balsamic." }
+      { name:"Joey's Special", roll:"9.99",  hero:"13.99", desc:"Prosciutto, fresh mozzarella, red roasted peppers & balsamic dressing." },
+      { name:"Italian Combo",  roll:"9.99",  hero:"13.99", desc:"Ham, Genoa salami, provolone & pepperoni or mortadella, oil & vinegar, lettuce, tomato, peppers & onions." },
+      { name:"Zio's Combo",    roll:"10.49", hero:"14.99", desc:"Prosciutto, capocolla, soppressata, pepperoni, mozzarella, peppers, oil & vinegar." },
+      { name:"First Born",     roll:"9.99",  hero:"13.99", desc:"Deluxe roast beef, cheddar, lettuce, tomato, onions, pickles & mayo." },
+      { name:"Fia's Special",  roll:"9.99",  hero:"13.99", desc:"Ovengold turkey, Muenster cheese, lettuce, pickles, oil & vinegar." },
+      { name:"Scotty's Special", roll:"9.99", hero:"13.99", desc:"Fried eggplant, fresh mozzarella, red roasted peppers & balsamic." }
     ]
   },
   categories: [
@@ -42,73 +39,72 @@ window.MENU_DATA = {
       title:"Breakfast", icon:"breakfast", caption:"Served from open · 6 AM weekdays",
       cols:["Roll","Wedge"],
       items:[
-        { name:"Egg Sandwich", sub:"two eggs", p:["2.85","4.35"] },
-        { name:"w/ Cheese", p:["3.35","4.85"] },
-        { name:"w/ Ham, Bacon or Sausage", p:["4.10","5.85"] },
-        { name:"w/ Meat & Cheese", p:["4.60","6.85"] },
-        { name:"Omelettes", sub:"plain / w-cheese", p:["4.35","4.85"] },
-        { name:"Breakfast Pita", sub:"2 eggs, bacon & cheese", full:"4.99" },
-        { name:"Bagel w/ Cream Cheese", full:"2.75" }
+        { name:"Egg Sandwich", sub:"two eggs, scrambled or fried", p:["3.60","4.95"] },
+        { name:"w/ American Cheese", p:["4.00","5.95"] },
+        { name:"w/ Ham, Bacon or Sausage", p:["5.25","6.75"] },
+        { name:"w/ Meat & Cheese", p:["5.75","8.25"] },
+        { name:"Omelette", sub:"w/ cheese 5.95 · w/ meat 6.75 · western or veggie 8.95", full:"4.95" },
+        { name:"Breakfast Pita", sub:"2 eggs, bacon & cheese", full:"6.25" },
+        { name:"Potato & Eggs or Home Fries", sub:"roll or small tin / large", full:"5.99 / 8.99" },
+        { name:"Croissant · Danish · Muffin", sub:"w/ butter 3.95", full:"3.75" },
+        { name:"Bagel w/ Cream Cheese", full:"3.75" }
       ]
     },
     {
-      title:"Hot Daily Specials", icon:"hot", caption:"Varies daily · Parm add $1.25",
-      cols:["Roll","Wedge","Dish"],
+      title:"Hot Food", icon:"hot", caption:"Made hot — on a roll, wedge, or by the pound",
+      cols:["Roll","Wedge","lb"],
       items:[
-        { name:"Chicken Cutlet", sub:"breaded", p:["7.99","9.99","9.99"] },
-        { name:"Grilled Chicken", p:["7.99","9.99","9.99"] },
-        { name:"Chicken Parmigiana", p:["7.99","9.99","9.99"] },
-        { name:"Eggplant Parmigiana", p:["7.99","9.99","9.99"] },
-        { name:"Meatball", p:["7.99","9.99","9.99"] },
-        { name:"Sausage & Peppers", p:["7.99","9.99","9.99"] },
-        { name:"Pasta or Rice", sub:"Small / Large", p:["","5.99","7.99"] }
+        { name:"Chicken Cutlet", p:["9.49","12.99","10.99"] },
+        { name:"Chicken Parmigiana", p:["9.49","12.99","10.99"] },
+        { name:"Meatballs", p:["9.49","12.99","10.99"] },
+        { name:"Fried Eggplant", p:["9.49","12.99","10.99"] },
+        { name:"Eggplant Parmigiana", p:["9.49","12.99","10.99"] },
+        { name:"Sausage & Peppers", p:["9.49","12.99","10.99"] }
       ]
     },
     {
-      title:"Homemade Cold Salads", icon:"coldsalads", caption:"Made in-house",
-      cols:["lb","Roll","Wrap"],
+      title:"Homemade Cold Salads", icon:"coldsalads", caption:"All store-made",
+      cols:["lb","Roll","Wedge"],
       items:[
-        { name:"Chicken Salad", p:["9.99","7.99","8.99"] },
-        { name:"Cranberry Chicken Salad", p:["10.99","7.99","8.99"] },
-        { name:"Tuna Salad", p:["9.99","7.99","8.99"] },
-        { name:"Egg Salad", p:["6.99","6.49","7.99"] },
-        { name:"Tomato & Mozzarella", full:"6.99 / lb" },
-        { name:"Roasted Peppers", full:"8.99 / lb" }
+        { name:"Chicken Salad", p:["10.99","8.99","11.99"] },
+        { name:"Cranberry Chicken Salad", p:["11.99","8.99","11.99"] },
+        { name:"Tuna Salad", p:["10.99","8.99","11.99"] },
+        { name:"Egg Salad", p:["8.99","6.49","8.99"] },
+        { name:"Tomato & Mozzarella", full:"9.99 / lb" },
+        { name:"Cole Slaw, Macaroni or Potato Salad", full:"6.99 / lb" },
+        { name:"Pasta Salad", sub:"seasonal", full:"8.99 / lb" },
+        { name:"Roasted Peppers", full:"8.99 / lb" },
+        { name:"Rice Pudding", full:"8.99 / lb" }
       ]
     },
     {
-      title:"Salads & Coffee Bar", icon:"saladscoffee", caption:"Fresh greens · fresh-brewed espresso",
+      title:"Fresh Salads", icon:"saladscoffee", caption:"Made to order · dressings on request",
       items:[
-        { name:"House Salad", sub:"greens, veg, olives, mozzarella", price:"6.95" },
-        { name:"Caesar Salad", sub:"romaine, parmesan, croutons", price:"6.95" },
-        { name:"Chef Salad", sub:"turkey, ham & swiss", price:"9.95" },
-        { name:"Coffee / Tea", sub:"sm / lg", price:"1.75+" },
-        { name:"Cappuccino", price:"3.99" },
-        { name:"Caffè Latte", price:"3.99" },
-        { name:"Espresso", sub:"single", price:"3.00" },
-        { name:"Daily Soup", sub:"per pint · seasonal", price:"4.99" }
+        { name:"Tossed Green Salad", sub:"lettuce, tomato, cucumber, carrots, onions & peppers", price:"7.99" },
+        { name:"Chef Salad", sub:"turkey, ham & swiss", price:"11.99" },
+        { name:"Add grilled chicken", price:"+4.00" }
       ]
     },
     {
-      title:"Cold Cuts & Sandwiches", icon:"coldcuts", caption:"Boar's Head & Italian imports · sliced fresh",
+      title:"Premium Meats & Cheeses", icon:"coldcuts", caption:"Sliced fresh · sandwich on a roll or hero",
       span2:true, twoCol:true, cols:["lb","Roll","Hero"],
-      note:"Cheeses (lb / Roll / Hero): Mozzarella 9.99 · Provolone 8.99 · Swiss 8.99 · American 8.49 · Cheddar 9.99 · Pepper Jack 9.99 · Muenster 8.49.&nbsp; Extras: Bacon +1.75 · Fresh Mozz or Avocado +1.25 · Extra Meat +2.00.",
+      note:"Cheeses (lb / Roll / Hero): American 8.49 / 5.99 / 6.99 · Cheddar 9.99 / 6.99 / 8.99 · Jalapeño Pepper Jack 9.99 / 6.99 / 8.99 · Munster 8.99 / 6.99 / 8.99 · Mozzarella 10.99 / 7.99 / 9.99 · Provolone 8.99 / 6.99 / 8.99 · Swiss 8.99 / 6.99 / 8.99.&nbsp; Add-ons: Bacon, BLT, Fresh Mozz or Avocado +1.75 roll / +2.25 hero · Cheese, Peppers, Olives, Onions, Lettuce, Tomato or Pickles +0.50 roll / +1.00 wedge each.",
       items:[
-        { name:"Prosciutto Imported", p:["19.99","8.99","10.99"] },
-        { name:"Prosciutto Domestic", p:["17.99","8.50","10.50"] },
-        { name:"Calabrese Soppressata", p:["19.99","8.99","10.99"] },
-        { name:"Soppressata", p:["18.99","8.50","10.75"] },
-        { name:"Capocollo", sub:"hot or sweet", p:["19.99","8.99","10.99"] },
-        { name:"Genoa Salami", p:["14.49","8.25","10.25"] },
-        { name:"Mortadella", p:["12.49","7.99","9.99"] },
-        { name:"Pepperoni", p:["9.49","7.99","9.99"] },
-        { name:"Roast Beef", p:["16.99","8.25","10.25"] },
-        { name:"Turkey Oven Gold", p:["16.49","8.25","10.25"] },
-        { name:"Honey Maple Turkey", p:["14.49","8.25","10.25"] },
-        { name:"Pastrami", p:["14.99","8.25","10.99"] },
-        { name:"Virginia Ham", p:["13.99","8.25","10.25"] },
-        { name:"Deluxe Ham", p:["13.49","8.25","10.25"] },
-        { name:"Sliced Chicken Breast", p:["13.99","8.25","10.25"] },
+        { name:"Prosciutto di Parma", p:["19.99","9.49","12.99"] },
+        { name:"Prosciutto Domestic", p:["17.99","8.99","11.99"] },
+        { name:"Calabrese Sopressata", p:["19.99","8.99","11.99"] },
+        { name:"Sopressata", sub:"hot or sweet", p:["18.99","8.99","11.99"] },
+        { name:"Capocollo", sub:"hot or sweet", p:["19.99","8.99","11.99"] },
+        { name:"Genoa Salami", p:["14.99","8.99","11.99"] },
+        { name:"Pepperoni", p:["9.99","8.99","11.99"] },
+        { name:"Mortadella", p:["13.49","8.49","10.99"] },
+        { name:"Ovengold Turkey", p:["16.99","8.99","11.99"] },
+        { name:"Honey Maple Turkey", p:["15.99","8.99","11.99"] },
+        { name:"EverRoast Chicken", p:["14.99","8.99","11.99"] },
+        { name:"Roast Beef", p:["17.99","8.99","11.99"] },
+        { name:"Pastrami", p:["14.99","8.99","11.99"] },
+        { name:"Virginia Ham", p:["14.99","8.99","11.99"] },
+        { name:"Deluxe Ham", p:["14.49","8.99","11.99"] },
         { name:"Bologna", p:["8.99","5.99","7.99"] }
       ]
     }
@@ -149,7 +145,7 @@ window.CATERING_DATA = {
       title:"Party Heroes & Platters", icon:"platters", caption:"The centerpiece of any gathering",
       span2:true, twoCol:true,
       items:[
-        { name:"Party Heroes — 3 or 6 ft wedges", sub:"4 meats & 1 cheese · ring shape +$1.00/ft", price:"$18.99/ft" },
+        { name:"Party Heroes — 3 or 6 ft wedges", sub:"ring shape +$1.00/ft", price:"$18.99/ft" },
         { name:"Zio's Party Platter", sub:"Genoa salami, soppressata, pepperoni, provolone, olives, roasted peppers, artichoke hearts & bocconcini", price:"$120 lg" },
         { name:"Cold Cut Platter", sub:"Small / Large", price:"$65–120" },
         { name:"Also available", sub:"Italian antipasto · mixed sandwiches & wraps · assorted cheese & fruit", price:"Call" }
