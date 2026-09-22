@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Accessibility Statement - Zio's Italian Deli</title>
+<meta name="description" content="Zio's Italian Deli is committed to digital accessibility and works to conform to WCAG 2.1 Level AA. Contact us if you have any trouble using our site.">
+<link rel="canonical" href="https://ziosdeli.com/accessibility.html">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="theme-color" content="#0C3A22">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700&family=DM+Serif+Display&display=swap');
+  :root{
+    --paper:#FFFDF8;--ink:#23302A;--muted:#63705F;--green:#0B8A3E;--green-deep:#076B30;
+    --green-dark:#0C3A22;--red:#CD212A;--line:#E7E0CE;
+    --display:'DM Serif Display',Georgia,'Times New Roman',serif;
+    --body:'DM Sans','Segoe UI',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:var(--green-deep)}
+  a:focus-visible{outline:3px solid var(--green-deep);outline-offset:2px;border-radius:4px}
+  .tricolore{height:5px;background:linear-gradient(90deg,var(--green) 0 33.33%,#fff 33.33% 66.66%,var(--red) 66.66% 100%)}
+  .top{max-width:760px;margin:0 auto;padding:22px 20px 0}
+  .home{display:inline-flex;align-items:center;gap:9px;text-decoration:none;color:var(--ink);font-family:var(--body);font-weight:600;padding:6px 0}
+  .home img{width:40px;height:34px}
+  main{max-width:760px;margin:0 auto;padding:14px 20px 60px}
+  h1{font-family:var(--display);font-weight:400;font-size:clamp(30px,6vw,42px);line-height:1.1;margin:18px 0 6px}
+  .lead{font-size:18px;color:var(--muted);margin:0 0 30px}
+  h2{font-family:var(--display);font-weight:400;font-size:23px;margin:34px 0 10px}
+  p{margin:0 0 14px}
+  ul{margin:0 0 14px;padding-left:20px}
+  li{margin:0 0 7px}
+  .contact{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:8px 0 8px}
+  .contact a{font-weight:600}
+  .updated{color:var(--muted);font-size:14px;margin-top:34px}
+  footer{border-top:1px solid var(--line);max-width:760px;margin:0 auto;padding:22px 20px 40px;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<div class="tricolore"></div>
+<div class="top">
+  <a class="home" href="index.html"><img src="flags.png" alt="Zio's Italian Deli logo - crossed American and Italian flags"><span>&larr; Back to Zio's Italian Deli</span></a>
+</div>
+<main>
+  <h1>Accessibility Statement</h1>
+  <p class="lead">Zio's Italian Deli is committed to making ziosdeli.com welcoming and usable for everyone, including people with disabilities.</p>
+
+  <h2>Our standard</h2>
+  <p>We aim to conform to the <strong>Web Content Accessibility Guidelines (WCAG) 2.1, Level AA</strong> - the widely recognized standard for making websites accessible to people who use screen readers, keyboard navigation, and other assistive technologies.</p>
+
+  <h2>What we have done</h2>
+  <ul>
+    <li>Our full menu is written as real text on the page, so screen readers can read every item and price.</li>
+    <li>The whole site works with a keyboard, with a visible focus indicator and a "skip to main content" link.</li>
+    <li>Images have descriptive text alternatives, and decorative graphics are hidden from screen readers.</li>
+    <li>Text and controls meet AA color-contrast levels, and we respect the "reduced motion" setting.</li>
+    <li>Clear headings and structure make it easy to move around the page.</li>
+  </ul>
+
+  <h2>Ongoing effort</h2>
+  <p>Accessibility is an ongoing effort. We review the site periodically and work to fix any issues we find.</p>
+
+  <h2>Need help, or found a problem?</h2>
+  <p>If you ever have trouble using this website or placing an order, please contact us directly - we are always glad to help, including taking your order by phone or email.</p>
+  <div class="contact">
+    <p style="margin:0 0 6px"><strong>Zio's Italian Deli</strong></p>
+    <p style="margin:0 0 6px">Phone: <a href="tel:+19149308535">(914) 930-8535</a></p>
+    <p style="margin:0 0 6px">Email: <a href="mailto:ziosdeli@gmail.com">ziosdeli@gmail.com</a></p>
+    <p style="margin:0">2040 Albany Post Road, Croton-on-Hudson, NY 10520</p>
+  </div>
+  <p>We welcome your feedback on the accessibility of our site.</p>
+
+  <p class="updated">Last updated: September 22, 2026</p>
+</main>
+<footer>
+  <p style="margin:0">&copy; <span id="yr"></span> Zio's Italian Deli &middot; Croton-on-Hudson, NY &middot; <a href="index.html">Home</a></p>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
