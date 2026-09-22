@@ -254,6 +254,10 @@
   footer .legal{border-top:1px solid rgba(255,255,255,.16);margin-top:38px;padding-top:20px;font-size:12.5px;color:#94ad9c;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   @media(max-width:720px){footer .cols{grid-template-columns:1fr;gap:28px}}
   .to-top{text-align:center;margin-top:8px}
+  /* WCAG 2.2 target size (2.5.8): min 24px tall on standalone links */
+  nav.main a{padding-block:7px}
+  footer .cols a{display:inline-block;padding-block:5px}
+  .to-top a{display:inline-block;padding:6px 12px}
   @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
