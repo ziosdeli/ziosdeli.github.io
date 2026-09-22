@@ -64,6 +64,13 @@
   .wrap{max-width:var(--maxw);margin:0 auto;padding-inline:20px}
   section{scroll-margin-top:84px}
 
+  /* Keyboard focus + skip link */
+  a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:3px solid var(--green-deep);outline-offset:2px;border-radius:4px}
+  main:focus{outline:none}
+  .skip-link{position:absolute;left:12px;top:-60px;z-index:200;background:var(--green-dark);color:#fff;font-family:var(--head);font-weight:600;font-size:14px;padding:11px 18px;border-radius:0 0 10px 10px;text-decoration:none;transition:top .15s}
+  .skip-link:focus{top:0}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
   .tricolore{height:5px;background:linear-gradient(90deg,var(--green) 0 33.33%,#fff 33.33% 66.66%,var(--red) 66.66% 100%)}
 
   .logo{width:50px;height:42px;flex:none}
@@ -73,7 +80,7 @@
   .bar{display:flex;align-items:center;gap:16px;min-height:68px;padding-block:8px}
   .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);margin-right:auto}
   .brand b{font-family:var(--head);font-weight:700;font-size:22px;letter-spacing:.2px;line-height:1;display:block}
-  .brand .tag{font-family:var(--head);font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:var(--green);font-weight:600}
+  .brand .tag{font-family:var(--head);font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:var(--green-deep);font-weight:600}
   nav.main{display:flex;gap:22px}
   nav.main a{font-family:var(--head);text-transform:uppercase;letter-spacing:1.2px;font-size:13px;font-weight:600;text-decoration:none;color:var(--ink);opacity:.85}
   nav.main a:hover{opacity:1;color:var(--green)}
@@ -123,7 +130,7 @@
 
   .board{background:#fff;border:1px solid var(--line);border-radius:18px;padding:0 22px 20px;box-shadow:var(--shadow);overflow:hidden}
   .board .bhead{margin:0 -22px 14px;padding:16px 22px;background:var(--green-dark);text-align:center}
-  .board h3{font-family:var(--display);color:#fff;font-weight:400;font-size:26px;letter-spacing:0;margin:0}
+  .board h2{font-family:var(--display);color:#fff;font-weight:400;font-size:26px;letter-spacing:0;margin:0}
   .board .sub{font-family:var(--head);text-transform:uppercase;letter-spacing:2px;font-size:10px;color:#B8E0C4;margin-top:2px}
   .board ul{list-style:none;margin:0;padding:0}
   .board li{display:flex;align-items:baseline;gap:8px;padding:8px 0;border-bottom:1px dashed var(--line);font-size:14.5px;color:var(--ink)}
@@ -212,11 +219,12 @@
   .info-card h3{font-family:var(--head);text-transform:uppercase;letter-spacing:1.2px;font-size:16px;font-weight:700;margin:0 0 16px;color:var(--ink);display:flex;align-items:center;gap:9px}
   .info-card h3 svg{width:19px;height:19px;color:var(--green)}
   .hours-tbl{width:100%;border-collapse:collapse;font-size:15px}
-  .hours-tbl td{padding:9px 0;border-bottom:1px dashed var(--line)}
+  .hours-tbl th,.hours-tbl td{padding:9px 0;border-bottom:1px dashed var(--line)}
+  .hours-tbl th{text-align:left;font-weight:400}
   .hours-tbl td:last-child{text-align:right;font-family:var(--head);font-weight:600;color:var(--ink)}
-  .hours-tbl tr.today td{color:var(--green-deep);font-weight:700}
-  .hours-tbl tr.today td:first-child::after{content:" • Today";font-family:var(--head);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--red)}
-  .hours-tbl tr:last-child td{border-bottom:0}
+  .hours-tbl tr.today th,.hours-tbl tr.today td{color:var(--green-deep);font-weight:700}
+  .hours-tbl tr.today th::after{content:" • Today";font-family:var(--head);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--red)}
+  .hours-tbl tr:last-child th,.hours-tbl tr:last-child td{border-bottom:0}
   .addr{font-size:15.5px;line-height:1.9;margin:0 0 18px}
   .addr b{font-family:var(--head)}
   .addr a{color:var(--green-deep);text-decoration:none;font-weight:600}
@@ -246,11 +254,12 @@
   footer .legal{border-top:1px solid rgba(255,255,255,.16);margin-top:38px;padding-top:20px;font-size:12.5px;color:#94ad9c;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   @media(max-width:720px){footer .cols{grid-template-columns:1fr;gap:28px}}
   .to-top{text-align:center;margin-top:8px}
-  @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
 
+<a class="skip-link" href="#top">Skip to main content</a>
 
 <!-- Crossed-flags logo sprite (US + Italy) -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="crossedflags" viewBox="0 0 64 54">
@@ -291,8 +300,8 @@
       <a href="#about">About</a>
       <a href="#visit">Visit</a>
     </nav>
-    <a class="call" href="tel:+19149308535">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <a class="call" href="tel:+19149308535" aria-label="Call Zio's Italian Deli at (914) 930-8535">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       <span class="num">(914) 930-8535</span>
     </a>
     <button class="hamburger" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><span></span></button>
@@ -317,7 +326,7 @@
   </a>
 </div>
 
-<main id="top">
+<main id="top" tabindex="-1">
 <!-- HERO -->
 <section class="hero" aria-label="Introduction">
   <div class="wrap">
@@ -345,7 +354,7 @@
     </div>
 
     <aside class="board" aria-label="Signature heroes">
-      <div class="bhead"><h3>Signature Heroes</h3><div class="sub">Made to order</div></div>
+      <div class="bhead"><h2>Signature Heroes</h2><div class="sub">Made to order</div></div>
       <ul id="heroList"></ul>
       <p class="note">Hero prices shown. Roll from $9.99. See full menu below.</p>
     </aside>
@@ -426,11 +435,11 @@
     <div>
       <p class="kicker">Our Story</p>
       <h2 class="h2">Your neighborhood "zio"</h2>
-      <p class="intro">In Italian, <em style="font-family:var(--script);font-style:italic;color:var(--red-deep)">zio</em> means uncle - and that's exactly the welcome you'll get. We're a family-run Italian deli and neighborhood Italian eatery in the heart of Croton-on-Hudson, Westchester County, serving fresh hero sandwiches, store-made fresh mozzarella, imported specialties and honest, made-from-scratch food to our neighbors along the Hudson.</p>
+      <p class="intro">In Italian, <em lang="it" style="font-family:var(--script);font-style:italic;color:var(--red-deep)">zio</em> means uncle - and that's exactly the welcome you'll get. We're a family-run Italian deli and neighborhood Italian eatery in the heart of Croton-on-Hudson, Westchester County, serving fresh hero sandwiches, store-made fresh mozzarella, imported specialties and honest, made-from-scratch food to our neighbors along the Hudson.</p>
       <p class="intro" style="margin-bottom:0">Grabbing coffee before the Metro-North, feeding the office, or catering the block party - pull up a stool. You're family here.</p>
     </div>
     <div class="about-card">
-      <p class="zio">"Mangia bene, vivi bene."</p>
+      <p class="zio" lang="it">"Mangia bene, vivi bene."</p>
       <p style="font-family:var(--head);text-transform:uppercase;letter-spacing:1.5px;font-size:12px;color:var(--muted);margin:0 0 18px">Eat well, live well.</p>
       <p>What sets us apart is simple: quality ingredients, generous portions, and service from a place that knows your name. Store-made fresh mozzarella, homemade chicken cutlets and salads, imported prosciutto and soppressata you won't find at the supermarket.</p>
       <p>Stop in - better yet, become a regular.</p>
@@ -466,7 +475,7 @@
     <p class="intro">Right on Albany Post Road (Route 9A), with easy parking - minutes from the Croton-Harmon station. Come say hi.</p>
     <div class="visit-grid">
       <div class="info-card">
-        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Location &amp; Contact</h3>
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Location &amp; Contact</h3>
         <p class="addr">
           <b>Zio's Italian Deli</b><br>
           2040 Albany Post Road<br>
@@ -483,16 +492,16 @@
         </div>
       </div>
       <div class="info-card">
-        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Hours</h3>
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Hours</h3>
         <table class="hours-tbl">
           <tbody>
-            <tr><td>Monday</td><td>6:00 AM - 6:00 PM</td></tr>
-            <tr><td>Tuesday</td><td>6:00 AM - 6:00 PM</td></tr>
-            <tr><td>Wednesday</td><td>6:00 AM - 6:00 PM</td></tr>
-            <tr><td>Thursday</td><td>6:00 AM - 6:00 PM</td></tr>
-            <tr><td>Friday</td><td>6:00 AM - 6:00 PM</td></tr>
-            <tr><td>Saturday</td><td>7:00 AM - 4:00 PM</td></tr>
-            <tr><td>Sunday</td><td>8:00 AM - 2:00 PM</td></tr>
+            <tr><th scope="row">Monday</th><td>6:00 AM - 6:00 PM</td></tr>
+            <tr><th scope="row">Tuesday</th><td>6:00 AM - 6:00 PM</td></tr>
+            <tr><th scope="row">Wednesday</th><td>6:00 AM - 6:00 PM</td></tr>
+            <tr><th scope="row">Thursday</th><td>6:00 AM - 6:00 PM</td></tr>
+            <tr><th scope="row">Friday</th><td>6:00 AM - 6:00 PM</td></tr>
+            <tr><th scope="row">Saturday</th><td>7:00 AM - 4:00 PM</td></tr>
+            <tr><th scope="row">Sunday</th><td>8:00 AM - 2:00 PM</td></tr>
           </tbody>
         </table>
       </div>
@@ -664,7 +673,7 @@
   /* ====================  RENDERER (no need to edit below)  ==================== */
   (function(){
     function ico(key){
-      return '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">'+(ICONS[key]||ICONS.salad)+'</svg>';
+      return '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false">'+(ICONS[key]||ICONS.salad)+'</svg>';
     }
     function nameHtml(it){
       return '<b>'+it.name+'</b>'+(it.sub ? ' <small>'+it.sub+'</small>' : '');
@@ -675,13 +684,13 @@
         return '<li>'+nm+'<span class="lead"></span><span class="pr">'+(it.price||'')+'</span></li>';
       }
       if(it.full !== undefined){
-        return '<li>'+nm+'<span class="pr" style="grid-column:span '+cols.length+'">'+it.full+'</span></li>';
+        return '<li>'+nm+'<span class="pr" style="grid-column:span '+cols.length+'"><span class="sr-only">Price: </span>'+it.full+'</span></li>';
       }
-      var cells = cols.map(function(_,i){ return '<span class="pr">'+((it.p&&it.p[i])||'')+'</span>'; }).join('');
+      var cells = cols.map(function(c,i){ var v=(it.p&&it.p[i])||''; return '<span class="pr">'+(v?'<span class="sr-only">'+c+': </span>'+v:'')+'</span>'; }).join('');
       return '<li>'+nm+cells+'</li>';
     }
     function listHtml(items, cols){
-      var head = cols ? '<div class="phead"><span class="lbl"></span>'+cols.map(function(c){return '<span>'+c+'</span>';}).join('')+'</div>' : '';
+      var head = cols ? '<div class="phead" aria-hidden="true"><span class="lbl"></span>'+cols.map(function(c){return '<span>'+c+'</span>';}).join('')+'</div>' : '';
       return '<ul>'+head+items.map(function(it){return row(it,cols);}).join('')+'</ul>';
     }
     function card(cat){
