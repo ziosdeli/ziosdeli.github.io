@@ -28,10 +28,10 @@ window.MENU_DATA = {
     items: [
       { name:"Joey's Special", roll:"9.99",  hero:"13.99", desc:"Prosciutto, fresh mozzarella, red roasted peppers & balsamic dressing." },
       { name:"Italian Combo",  roll:"9.99",  hero:"13.99", desc:"Ham, Genoa salami, provolone & pepperoni or mortadella, oil & vinegar, lettuce, tomato, peppers & onions." },
-      { name:"Zio's Combo",    roll:"10.49", hero:"14.99", desc:"Prosciutto, capocolla, soppressata, pepperoni, mozzarella, peppers, oil & vinegar." },
       { name:"First Born",     roll:"9.99",  hero:"13.99", desc:"Deluxe roast beef, cheddar, lettuce, tomato, onions, pickles & mayo." },
       { name:"Fia's Special",  roll:"9.99",  hero:"13.99", desc:"Ovengold turkey, Muenster cheese, lettuce, pickles, oil & vinegar." },
-      { name:"Scotty's Special", roll:"9.99", hero:"13.99", desc:"Fried eggplant, fresh mozzarella, red roasted peppers & balsamic." }
+      { name:"Scotty's Special", roll:"9.99", hero:"13.99", desc:"Fried eggplant, fresh mozzarella, red roasted peppers & balsamic." },
+      { name:"Zio's Combo",    roll:"10.49", hero:"14.99", desc:"Prosciutto, capocolla, soppressata, pepperoni, mozzarella, peppers, oil & vinegar." }
     ]
   },
   categories: [
@@ -63,7 +63,7 @@ window.MENU_DATA = {
       ]
     },
     {
-      title:"Homemade Cold Salads", icon:"coldsalads", caption:"All store-made",
+      title:"Store-Made Cold Salads", icon:"coldsalads", caption:"Made fresh in-house",
       cols:["lb","Roll","Wedge"],
       items:[
         { name:"Chicken Salad", p:["10.99","8.99","11.99"] },
