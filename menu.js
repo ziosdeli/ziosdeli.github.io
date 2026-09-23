@@ -44,7 +44,7 @@ window.MENU_DATA = {
         { name:"w/ Ham, Bacon or Sausage", p:["5.25","6.75"] },
         { name:"w/ Meat & Cheese", p:["5.75","8.25"] },
         { name:"Omelette", sub:"w/ cheese 5.95 · w/ meat 6.75 · western or veggie 8.95", full:"4.95" },
-        { name:"Breakfast Pita", sub:"2 eggs, bacon & cheese", full:"6.25" },
+        { name:"Breakfast Pita", sub:"egg, peppers, onions, yellow pepper jack cheese", full:"6.25" },
         { name:"Potato & Eggs or Home Fries", sub:"roll or small tin / large", full:"5.99 / 8.99" },
         { name:"Croissant · Danish · Muffin", sub:"w/ butter 3.95", full:"3.75" },
         { name:"Bagel w/ Cream Cheese", full:"3.75" }
@@ -88,7 +88,8 @@ window.MENU_DATA = {
     {
       title:"Premium Meats & Cheeses", icon:"coldcuts", caption:"Sliced fresh · sandwich on a roll or hero",
       span2:true, twoCol:true, cols:["lb","Roll","Hero"],
-      note:"Cheeses (lb / Roll / Hero): American 8.49 / 5.99 / 6.99 · Cheddar 9.99 / 6.99 / 8.99 · Jalapeño Pepper Jack 9.99 / 6.99 / 8.99 · Munster 8.99 / 6.99 / 8.99 · Mozzarella 10.99 / 7.99 / 9.99 · Provolone 8.99 / 6.99 / 8.99 · Swiss 8.99 / 6.99 / 8.99.&nbsp; Add-ons: Bacon, BLT, Fresh Mozz or Avocado +1.75 roll / +2.25 hero · Cheese, Peppers, Olives, Onions, Lettuce, Tomato or Pickles +0.50 roll / +1.00 wedge each.",
+      box:"<b>Cheeses</b> (lb / Roll / Hero): American 8.49 / 5.99 / 6.99 · Cheddar 9.99 / 6.99 / 8.99 · Jalapeño Pepper Jack 9.99 / 6.99 / 8.99 · Munster 8.99 / 6.99 / 8.99 · Mozzarella 10.99 / 7.99 / 9.99 · Provolone 8.99 / 6.99 / 8.99 · Swiss 8.99 / 6.99 / 8.99.",
+      note:"Add-ons: Bacon, BLT, Fresh Mozz or Avocado +1.75 roll / +2.25 hero · Cheese, Peppers, Olives, Onions, Lettuce, Tomato or Pickles +0.50 roll / +1.00 wedge each.",
       items:[
         { name:"Prosciutto di Parma", p:["19.99","9.49","12.99"] },
         { name:"Prosciutto Domestic", p:["17.99","8.99","11.99"] },
@@ -118,9 +119,9 @@ window.CATERING_DATA = {
       cols:["Half","Full"],
       items:[
         { name:"Baked Ziti", p:["45","80"] },
-        { name:"Penne Vodka", p:["50","85"] },
-        { name:"Primavera", p:["50","85"] },
-        { name:"Manicotti", p:["50","85"] },
+        { name:"Penne Vodka", p:["50","90"] },
+        { name:"Primavera", p:["50","90"] },
+        { name:"Manicotti", p:["50","90"] },
         { name:"Cheese Ravioli", p:["50","85"] },
         { name:"Rigatoni Bolognese", p:["50","90"] },
         { name:"Lasagna", sub:"ricotta, mozzarella & egg", full:"Full 100" }
@@ -131,7 +132,7 @@ window.CATERING_DATA = {
       cols:["Half","Full"],
       items:[
         { name:"Chicken", sub:"Francese, Marsala, Parmigiana or Scarpariello", p:["60","110"] },
-        { name:"Eggplant Parmigiana", p:["50","90"] },
+        { name:"Eggplant Parmigiana", p:["50","100"] },
         { name:"Eggplant Rollatini", p:["55","100"] },
         { name:"Meatballs", p:["60","100"] },
         { name:"Sausage & Peppers", p:["60","100"] },

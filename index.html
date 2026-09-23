@@ -79,7 +79,7 @@
   header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(251,247,238,.96);color:var(--ink);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
   .bar{display:flex;align-items:center;gap:16px;min-height:68px;padding-block:8px}
   .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);margin-right:auto}
-  .brand b{font-family:var(--head);font-weight:700;font-size:26.4px;letter-spacing:.2px;line-height:1;display:block}
+  .brand b{font-family:var(--head);font-weight:700;font-size:24px;letter-spacing:.2px;line-height:1;display:block}
   .brand .tag{font-family:var(--head);font-size:10.5px;letter-spacing:3px;text-transform:uppercase;color:var(--green-deep);font-weight:600}
   nav.main{display:flex;gap:22px}
   nav.main a{font-family:var(--head);text-transform:uppercase;letter-spacing:1.2px;font-size:13px;font-weight:600;text-decoration:none;color:var(--ink);opacity:.85}
@@ -139,6 +139,8 @@
   .board .lead{flex:1;border-bottom:1px dotted #cbb98f;transform:translateY(-4px)}
   .board .pr{font-family:var(--head);font-weight:700;color:var(--red-deep)}
   .board .note{text-align:center;font-size:11.5px;color:var(--muted);margin:14px 0 0;font-style:italic}
+  .pricebox{margin:14px 0 0;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:rgba(0,0,0,.03);font-size:13px;line-height:1.75;color:var(--ink)}
+  .hero-brand{font-family:var(--head);font-weight:800;font-size:clamp(28px,6vw,44px);line-height:1.03;color:var(--ink);margin:0 0 12px;letter-spacing:.3px}
   @media(max-width:820px){.hero .wrap{grid-template-columns:1fr;gap:34px;padding-block:42px 50px}.lede{max-width:none}}
 
   /* Feature strip */
@@ -338,6 +340,7 @@
 <section class="hero" aria-label="Introduction">
   <div class="wrap">
     <div>
+      <p class="hero-brand">Zio's Italian Deli</p>
       <p class="eyebrow">Croton-on-Hudson, NY <span class="dot">•</span> Store-made fresh mozzarella</p>
       <h1>Real Italian Deli.<br>Fresh-made <em>heroes</em>, every day.</h1>
       <p class="lede">Croton's neighborhood Italian deli - hot &amp; cold heroes, breakfast, imported cold cuts, store-made salads and full-service catering. Made fresh, seven days a week.</p>
@@ -407,7 +410,7 @@
     <h3 style="font-family:var(--head);text-transform:uppercase;letter-spacing:2px;font-size:15px;font-weight:700;color:var(--red);margin:0 0 6px">Signature Sandwiches</h3>
     <p class="cap" style="font-size:13px;color:var(--muted);font-style:italic;margin:0 0 18px">Priced Roll / Hero</p>
     <div class="sig-grid" id="sigGrid"></div>
-    <p class="cap" id="alsoAvail" style="font-size:13px;color:var(--muted);font-style:italic;margin:-26px 0 40px"></p>
+    <p class="cap" id="alsoAvail" style="font-size:15px;color:var(--ink);font-weight:600;font-style:italic;margin:-26px 0 40px"></p>
 
     <div class="menu-grid" id="menuGrid"></div>
 
@@ -466,10 +469,10 @@
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
     </div>
-    <p class="intro" style="margin:0 auto 4px;text-align:center">Google reviews are one of the biggest factors in local search ranking. Ask happy customers to leave one - then wire these buttons to your Google Business Profile.</p>
+    <p class="intro" style="margin:0 auto 4px;text-align:center">Enjoyed your visit? A quick Google review means the world to our family-run deli - and helps your neighbors find us.</p>
     <div class="reviews-cta" style="justify-content:center">
-      <a class="btn primary" href="https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID" target="_blank" rel="noopener">Leave a Google Review</a>
-      <a class="btn green" href="https://www.google.com/maps/search/Zio%27s+Italian+Deli+Croton-on-Hudson" target="_blank" rel="noopener">Read Reviews on Google</a>
+      <a class="btn primary" href="https://www.google.com/maps/search/?api=1&amp;query=Zio%27s%20Italian%20Deli%2C%202040%20Albany%20Post%20Road%2C%20Croton-on-Hudson%2C%20NY%2010520" target="_blank" rel="noopener">Leave a Google Review</a>
+      <a class="btn green" href="https://www.google.com/maps/search/?api=1&amp;query=Zio%27s%20Italian%20Deli%2C%202040%20Albany%20Post%20Road%2C%20Croton-on-Hudson%2C%20NY%2010520" target="_blank" rel="noopener">Read Reviews on Google</a>
     </div>
   </div>
 </section>
@@ -548,7 +551,7 @@
       </details>
       <details>
         <summary>Do you make your own fresh mozzarella?<span class="plus"></span></summary>
-        <div class="a">Yes - we make fresh mozzarella in-store daily, along with store-made chicken cutlets, salads and soups. It's the heart of our Italian deli and a Croton-on-Hudson favorite.</div>
+        <div class="a">Yes - we make fresh mozzarella in-store daily, along with store-made chicken cutlets, meatballs, salads and soups. It's the heart of our Italian deli and a Croton-on-Hudson favorite.</div>
       </details>
     </div>
   </div>
@@ -657,7 +660,7 @@
     { "@type": "Question", "name": "Can I call ahead to order a sandwich?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely - call (914) 930-8535 and we'll have your order ready for pickup. It's the fastest way to skip the lunch rush." } },
     { "@type": "Question", "name": "What's your most popular hero?", "acceptedAnswer": { "@type": "Answer", "text": "The Zio's Combo (prosciutto, capocolla, soppressata, pepperoni and fresh mozzarella) and the Chicken Cutlet are neighborhood favorites. Don't miss our store-made fresh mozzarella and daily store-made soups." } },
     { "@type": "Question", "name": "Is Zio's an Italian restaurant or a deli?", "acceptedAnswer": { "@type": "Answer", "text": "Both - Zio's is a family-run Italian deli and casual Italian eatery in Croton-on-Hudson serving made-to-order Italian sandwiches, hot food, store-made salads and store-made fresh mozzarella, plus full catering. Order at the counter for takeout or pickup." } },
-    { "@type": "Question", "name": "Do you make your own fresh mozzarella?", "acceptedAnswer": { "@type": "Answer", "text": "Yes - we make fresh mozzarella in-store daily, along with store-made chicken cutlets, salads and soups. It's the heart of our Italian deli and a Croton-on-Hudson favorite." } }
+    { "@type": "Question", "name": "Do you make your own fresh mozzarella?", "acceptedAnswer": { "@type": "Answer", "text": "Yes - we make fresh mozzarella in-store daily, along with store-made chicken cutlets, meatballs, salads and soups. It's the heart of our Italian deli and a Croton-on-Hudson favorite." } }
   ]
 }
 </script>
@@ -710,14 +713,15 @@
       } else {
         body = listHtml(cat.items, cat.cols);
       }
+      var box = cat.box ? '<div class="pricebox">'+cat.box+'</div>' : '';
       var note = cat.note ? '<p class="cap" style="margin:14px 0 0">'+cat.note+'</p>' : '';
-      return '<div class="'+cls+'"><h3>'+ico(cat.icon)+cat.title+'</h3><p class="cap">'+(cat.caption||'')+'</p>'+body+note+'</div>';
+      return '<div class="'+cls+'"><h3>'+ico(cat.icon)+cat.title+'</h3><p class="cap">'+(cat.caption||'')+'</p>'+body+box+note+'</div>';
     }
     function set(id, html){ var el = document.getElementById(id); if(el) el.innerHTML = html; }
 
     try{
-      // Hero list (first 5 heroes)
-      set('heroList', MENU_DATA.signature.items.slice(0,5).map(function(it){
+      // Hero list (all heroes)
+      set('heroList', MENU_DATA.signature.items.map(function(it){
         return '<li><span class="nm">'+it.name+'</span><span class="lead"></span><span class="pr">$'+it.hero+'</span></li>';
       }).join(''));
 
