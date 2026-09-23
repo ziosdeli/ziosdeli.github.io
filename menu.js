@@ -86,9 +86,8 @@ window.MENU_DATA = {
       ]
     },
     {
-      title:"Premium Meats & Cheeses", icon:"coldcuts", caption:"Sliced fresh · sandwich on a roll or hero",
+      title:"Premium Meats", icon:"coldcuts", caption:"Sliced fresh · sandwich on a roll or hero",
       span2:true, twoCol:true, cols:["lb","Roll","Hero"],
-      box:"<b>Cheeses</b> (lb / Roll / Hero): American 8.49 / 5.99 / 6.99 · Cheddar 9.99 / 6.99 / 8.99 · Jalapeño Pepper Jack 9.99 / 6.99 / 8.99 · Munster 8.99 / 6.99 / 8.99 · Mozzarella 10.99 / 7.99 / 9.99 · Provolone 8.99 / 6.99 / 8.99 · Swiss 8.99 / 6.99 / 8.99.",
       note:"Add-ons: Bacon, BLT, Fresh Mozz or Avocado +1.75 roll / +2.25 hero · Cheese, Peppers, Olives, Onions, Lettuce, Tomato or Pickles +0.50 roll / +1.00 wedge each.",
       items:[
         { name:"Prosciutto di Parma", p:["19.99","9.49","12.99"] },
@@ -107,6 +106,19 @@ window.MENU_DATA = {
         { name:"Virginia Ham", p:["14.99","8.99","11.99"] },
         { name:"Deluxe Ham", p:["14.49","8.99","11.99"] },
         { name:"Bologna", p:["8.99","5.99","7.99"] }
+      ]
+    },
+    {
+      title:"Cheeses", icon:"coldcuts", caption:"Sliced fresh · roll or hero",
+      span2:true, twoCol:true, cols:["lb","Roll","Hero"],
+      items:[
+        { name:"American", p:["8.49","5.99","6.99"] },
+        { name:"Cheddar", p:["9.99","6.99","8.99"] },
+        { name:"Jalapeño Pepper Jack", p:["9.99","6.99","8.99"] },
+        { name:"Munster", p:["8.99","6.99","8.99"] },
+        { name:"Mozzarella", p:["10.99","7.99","9.99"] },
+        { name:"Provolone", p:["8.99","6.99","8.99"] },
+        { name:"Swiss", p:["8.99","6.99","8.99"] }
       ]
     }
   ]
@@ -146,7 +158,8 @@ window.CATERING_DATA = {
       title:"Party Heroes & Platters", icon:"platters", caption:"The centerpiece of any gathering",
       span2:true, twoCol:true,
       items:[
-        { name:"Party Heroes - 3 or 6 ft wedges", sub:"ring shape +$1.00/ft", price:"$18.99/ft" },
+        { name:"Party Heroes - Cold Cut", sub:"3 or 6 ft wedges · ring shape +$1.00/ft", price:"$18.99/ft" },
+        { name:"Party Heroes - Chicken or Vegetable", sub:"3 or 6 ft wedges · ring shape +$1.00/ft", price:"$20.99/ft" },
         { name:"Zio's Party Platter", sub:"Genoa salami, soppressata, pepperoni, provolone, olives, roasted peppers, artichoke hearts & bocconcini", price:"$120 lg" },
         { name:"Cold Cut Platter", sub:"Small / Large", price:"$65-120" },
         { name:"Also available", sub:"Italian antipasto · mixed sandwiches & wraps · assorted cheese & fruit", price:"Call" }
