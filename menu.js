@@ -92,9 +92,9 @@ window.MENU_DATA = {
       items:[
         { name:"Prosciutto di Parma", p:["19.99","9.49","12.99"] },
         { name:"Prosciutto Domestic", p:["17.99","8.99","11.99"] },
-        { name:"Calabrese Sopressata", p:["19.99","8.99","11.99"] },
+        { name:"Calabrese Sopressata", p:["19.99","9.49","12.99"] },
         { name:"Sopressata", sub:"hot or sweet", p:["18.99","8.99","11.99"] },
-        { name:"Capocollo", sub:"hot or sweet", p:["19.99","8.99","11.99"] },
+        { name:"Capocollo", sub:"hot or sweet", p:["19.99","9.49","12.99"] },
         { name:"Genoa Salami", p:["14.99","8.99","11.99"] },
         { name:"Pepperoni", p:["9.99","8.99","11.99"] },
         { name:"Mortadella", p:["13.49","8.49","10.99"] },
