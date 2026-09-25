@@ -58,7 +58,7 @@ window.MENU_DATA = {
         { name:"Chicken Parmigiana", p:["9.49","12.99","10.99"] },
         { name:"Meatballs", p:["9.49","12.99","10.99"] },
         { name:"Fried Eggplant", p:["9.49","12.99","10.99"] },
-        { name:"Eggplant Parmigiana", p:["9.99","12.99","10.99"] },
+        { name:"Eggplant Parmigiana", p:["9.49","12.99","10.99"] },
         { name:"Sausage & Peppers", p:["9.49","12.99","10.99"] }
       ]
     },
